@@ -1,10 +1,23 @@
 import React, { Component } from 'react'
 
 class CityCard extends Component {
+
+    // constructor
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            zip: props.zip
+        }
+    };
+
+    // render CityCard component
     render() {
         return (
-            <div>
-                City Card
+            <div className='container'>
+                <div className='aCityCard'>
+                    <h5>{this.props.zip}</h5>
+                </div>
             </div>
         )
     }
