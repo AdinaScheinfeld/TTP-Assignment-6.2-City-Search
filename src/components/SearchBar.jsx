@@ -12,23 +12,17 @@ class SearchBar extends Component {
             city: "",
             cityFound: false,
         };
-
-        // bind methods to this
-        this.changeCity = this.changeCity.bind(this);
-        this.getCityInfo = this.getCityInfo.bind(this);
     }
 
     // Change the state of the city when the user enters a new city
-    changeCity (event) {
+    changeCity = (event) => {
         this.setState({city: event.target.value});
     }
 
     // Get data about a city using axios
-    getCityInfo () {
-        let cityInput = this.state.city;
-        let cityWords = cityInput.split(" ");
-        cityInput = cityWords.join("").toUpperCase();
-        axios.get(`http://ctp-zip-api.herokuapp.com/city/${cityInput}`)
+    getCityInfo = () => {
+
+        axios.get(`http://ctp-zip-api.herokuapp.com/city/${this.state.city.toUpperCase()}`)
             .then(response => {
                 console.log(response.data);
                 this.setState({data: response.data, cityFound: true});
