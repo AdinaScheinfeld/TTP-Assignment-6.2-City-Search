@@ -1,0 +1,13 @@
+.searchBarBack {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.searchBar {
+    width: 200px;
+}
+
+h3 {
+    color: white;
+}

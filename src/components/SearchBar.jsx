@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import CityCard from './CityCard'
 
+import './SearchBar.css'
+
 class SearchBar extends Component {
 
     constructor () {
